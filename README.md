@@ -1,11 +1,11 @@
-About shodan
-============
+About shodan-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/shodan-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/achillean/shodan-python
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/shodan-feedstock/blob/main/LICENSE.txt)
 
 Summary: Python library and command-line utility for Shodan, a search engine for Internet-connected devices.
 
