@@ -21,6 +21,7 @@ requirements:
     - pip
     - python >=3.4
   run:
+    - certifi
     - python >=3.4
     - click
     - click-plugins
@@ -29,13 +30,17 @@ requirements:
     - colorama
 
 test:
+  source_files:
+    - tests
   imports:
     - shodan
   commands:
     - pip check
     - shodan --help
+    - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
+    - pytest
 
 about:
   home: https://github.com/achillean/shodan-python
