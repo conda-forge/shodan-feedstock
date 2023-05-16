@@ -1,5 +1,5 @@
 {% set name = "shodan" %}
-{% set version = "1.28.0" %}
+{% set version = "1.29.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/shodan-{{ version }}.tar.gz
-  sha256: 18bd2ae81114b70836e0e3315227325e14398275223998a8c235b099432f4b0b
+  sha256: ebea6dbc1944497e9139263423ea4d103dcd58c085c5ddbf4d6ab1db6eb1d142
 
 build:
   noarch: python
@@ -21,6 +21,7 @@ requirements:
     - pip
     - python >=3.4
   run:
+    - certifi
     - python >=3.4
     - click
     - click-plugins
@@ -29,13 +30,18 @@ requirements:
     - colorama
 
 test:
+  source_files:
+    - tests
   imports:
     - shodan
   commands:
     - pip check
     - shodan --help
+    # Skip test suite becuase it requires Shodan API key
+#     - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
+    - pytest
 
 about:
   home: https://github.com/achillean/shodan-python
