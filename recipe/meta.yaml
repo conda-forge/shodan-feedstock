@@ -37,7 +37,8 @@ test:
   commands:
     - pip check
     - shodan --help
-    - pytest -vvv --capture=tee-sys tests
+    # Skip test suite becuase it requires Shodan API key
+#     - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
     - pytest
