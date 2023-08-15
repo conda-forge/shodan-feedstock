@@ -1,5 +1,5 @@
 {% set name = "shodan" %}
-{% set version = "1.29.1" %}
+{% set version = "1.30.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/shodan-{{ version }}.tar.gz
-  sha256: e2af6254e19d2a8fa4e929738be551e25dc7aafc394732e776e7e30fa44ce339
+  sha256: c9617c66c47b87d4801e7080b6c769ec9a31da398defe0b047a6794927436453
 
 build:
   noarch: python
