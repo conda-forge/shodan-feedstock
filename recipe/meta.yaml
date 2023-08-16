@@ -28,6 +28,7 @@ requirements:
     - xlsxwriter
     - requests >=2.2.1
     - colorama
+    - tldextract
 
 test:
   source_files:
